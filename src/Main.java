@@ -20,8 +20,14 @@ public class Main {
             System.out.println("1 : Add Student\n"
            +"2 : View Student\n" +
                     "3 : Search student\n"+
-                    "4 : Delete Student");
+                    "4 : Delete Student\n" +
+                    "enter 0 to exit");
             opt = sc.nextInt();
+
+            if(opt == 0)
+            {
+                break;
+            }
 
             switch (opt) {
                 case 1:
