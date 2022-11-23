@@ -16,7 +16,8 @@ public class Main {
 
             System.out.println("Employee App");
             System.out.println("1 : Add Student\n"
-           +"2 : View Student" );
+           +"2 : View Student\n" +
+                    "3 : Search student" );
             opt = sc.nextInt();
 
             switch (opt) {
@@ -45,6 +46,25 @@ public class Main {
                         System.out.println("------------------------------");
                     }
                     break;
+
+                case 3:
+
+                System.out.println("enter the admission number");
+                int id = sc.nextInt();
+
+                for(Student e : list)
+                {
+                    if(id == e.adno)
+                    {
+                        System.out.println("Roll No :"+e.rollno);
+                        System.out.println("Name :"+e.name);
+                        System.out.println("Adminssion Number :"+e.adno);
+                        System.out.println("College Name :"+e.college);
+                        System.out.println("------------------------------");
+
+                    }
+                }
+                break;
             }
         }
     }
