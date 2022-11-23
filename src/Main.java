@@ -5,6 +5,8 @@ import java.util.Scanner;
 
 public class Main {
 
+    static Student s;
+
     static int rollno,adno,opt;
     static String name,college;
     static ArrayList<Student> list=new ArrayList<Student>();
@@ -17,7 +19,8 @@ public class Main {
             System.out.println("Employee App");
             System.out.println("1 : Add Student\n"
            +"2 : View Student\n" +
-                    "3 : Search student" );
+                    "3 : Search student\n"+
+                    "4 : Delete Student");
             opt = sc.nextInt();
 
             switch (opt) {
@@ -65,6 +68,22 @@ public class Main {
                     }
                 }
                 break;
+
+                case 4:
+
+                    System.out.println("enter the admission number");
+                    int idd = sc.nextInt();
+
+                    for(Student e : list)
+                    {
+                        if(idd == e.adno)
+                        {
+                           s =e;
+
+                        }
+                    }
+                    list.remove(s);
+                    break;
             }
         }
     }
