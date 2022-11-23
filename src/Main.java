@@ -16,7 +16,7 @@ public class Main {
 
             System.out.println("Employee App");
             System.out.println("1 : Add Student\n"
-            );
+           +"2 : View Student" );
             opt = sc.nextInt();
 
             switch (opt) {
@@ -33,7 +33,18 @@ public class Main {
                     list.add(new Student(rollno,adno,name,college));
                     System.out.println("SUCCESSFULLY ADDED");
                     break;
+                case 2:
 
+                    System.out.println("Student List");
+                    for(Student  e : list)
+                    {
+                        System.out.println("Roll No :"+e.rollno);
+                        System.out.println("Name :"+e.name);
+                        System.out.println("Adminssion Number :"+e.adno);
+                        System.out.println("College Name :"+e.college);
+                        System.out.println("------------------------------");
+                    }
+                    break;
             }
         }
     }
